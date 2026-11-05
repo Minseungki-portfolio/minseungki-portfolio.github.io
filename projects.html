@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>프로젝트 | 개발자 포트폴리오</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <a href="index.html" class="logo">MyPortfolio</a>
+
+    <nav class="nav">
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="career.html" data-ko="Career">キャリア</a></li>
+        <li><a href="projects.html" class="active" data-ko="Projects">プロジェクト</a></li>
+        <li><a href="contact.html" data-ko="Contact">お問い合わせ</a></li>
+      </ul>
+
+      <!-- 언어 전환 스위치: 누른 쪽으로 흰색 배경이 미끄러지듯 이동 -->
+      <div class="lang-switch" role="group" aria-label="言語切替">
+        <span class="lang-thumb"></span>
+        <button type="button" class="lang-option" data-lang="ja" aria-pressed="true">日本語</button>
+        <button type="button" class="lang-option" data-lang="ko" aria-pressed="false">한국어</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===== 2. 메인 영역 (프로젝트 목록) ===== -->
+  <main class="main">
+    <div class="page">
+
+      <!-- 페이지 제목 -->
+      <div class="page-head">
+        <p class="intro-hello" data-ko="프로젝트">プロジェクト</p>
+        <h1 class="intro-title">Projects</h1>
+      </div>
+
+      <!-- ----- 프로젝트 1 ----- -->
+      <!-- 프로젝트를 추가하려면 <section class="card project"> ~ </section> 전체를 복사 -->
+      <section class="card project">
+        <h2 class="card-title" data-ko="감염병 전화문진·연락 관리 시스템 (infectcare)">感染症 電話問診・連絡管理システム（infectcare）</h2>
+        <span class="timeline-date" data-ko="2026.11 ｜ 개인 개발">2026.11 ｜ 個人開発</span>
+        <p class="card-desc" data-ko="보건소의 감염병 대응을 상정하여 설계·개발한 웹 시스템입니다. 환자 등록, 전화 문진, 접촉 희망자에 대한 연락 기록을 하나의 화면에서 관리할 수 있습니다. 새로운 감염병이 발생해도 관리자가 화면에서 증상 항목을 추가하기만 하면 계속 사용할 수 있습니다.">保健所での感染症対応を想定して設計・開発したWebシステムです。患者登録、電話問診、接触希望者への連絡記録を一つの画面で管理できます。新しい感染症が出た場合も、管理者が画面から症状項目を追加するだけで使い続けられます。</p>
+
+        <ul class="proj-points">
+          <li data-ko="환자가 자신의 스마트폰으로 정보를 입력할 수 있는 1회용 입력 링크">患者が自分のスマートフォンから情報を入力できる、一回限りの入力リンク</li>
+          <li data-ko="주민등록번호를 AES-256-GCM으로 암호화해 저장하고, 목록에서는 일부를 마스킹 표시">住民登録番号をAES-256-GCMで暗号化して保存し、一覧では一部をマスク表示</li>
+          <li data-ko="관리자·의사·간호사·일반 직원 권한 분리, 열람 이력을 남기는 감사 로그">管理者・医師・看護師・一般職員の権限分け、閲覧履歴を残す監査ログ</li>
+          <li data-ko="화면의 한국어/일본어 전환 (messages.properties를 이용한 다국어 지원)">画面の韓国語／日本語切り替え（messages.propertiesによる多言語対応）</li>
+        </ul>
+
+        <ul class="tag-list">
+          <li>Java 21</li>
+          <li>Spring Boot</li>
+          <li>Spring Security</li>
+          <li>MyBatis</li>
+          <li>Thymeleaf</li>
+          <li>Oracle</li>
+          <li>HTML / CSS / JavaScript</li>
+        </ul>
+
+        <a href="https://github.com/Minseungki-portfolio/infectcare" class="btn" target="_blank" rel="noopener" data-ko="GitHub에서 소스 코드 보기 ↗">GitHubでソースコードを見る ↗</a>
+
+        <!-- 사진 슬라이더: 가로 스크롤 또는 ◀ ▶ 버튼으로 이동 -->
+        <!-- 사진을 추가하려면 <li class="slide"> 한 줄을 복사하고 src만 바꾸기 (사진을 누르면 크게 보기) -->
+        <div class="slider">
+          <button class="slider-btn prev" type="button" aria-label="前の写真">‹</button>
+
+          <ul class="slider-track">
+            <li class="slide"><button class="slide-photo" type="button"><img src="images/projects/infectcare-1.png" alt="ホーム画面"></button><p data-ko="홈 화면">ホーム画面</p></li>
+            <li class="slide"><button class="slide-photo" type="button"><img src="images/projects/infectcare-2.png" alt="患者管理画面"></button><p data-ko="환자 관리 화면">患者管理画面</p></li>
+            <li class="slide"><button class="slide-photo" type="button"><img src="images/projects/infectcare-3.png" alt="問診管理画面"></button><p data-ko="문진 관리 화면">問診管理画面</p></li>
+            <li class="slide"><button class="slide-photo" type="button"><img src="images/projects/infectcare-4.png" alt="統計画面"></button><p data-ko="통계 화면">統計画面</p></li>
+          </ul>
+
+          <button class="slider-btn next" type="button" aria-label="次の写真">›</button>
+        </div>
+      </section>
+
+      <!-- ----- 프로젝트 2 ----- -->
+      <section class="card project">
+        <h2 class="card-title" data-ko="팀 프로젝트 (준비 중)">チームプロジェクト（準備中）</h2>
+        <span class="timeline-date">2026.11 — 2026.12</span>
+        <p class="card-desc" data-ko="Global In 코스에서 진행하는 팀 프로젝트입니다. 내용은 완성 후 게재하겠습니다.">Global Inコースで取り組むチームプロジェクトです。内容は完成後に掲載します。</p>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ===== 3. 사진 확대 팝업 (경력 페이지와 같은 모양) ===== -->
+  <dialog class="photo-modal" id="photoModal">
+    <button class="photo-close" type="button" aria-label="閉じる">×</button>
+    <img class="photo-img" id="photoImg" src="" alt="">
+    <p class="photo-title" id="photoTitle"></p>
+  </dialog>
+
+  <script>
+    const modal = document.getElementById('photoModal');
+    const modalImg = document.getElementById('photoImg');
+    const modalTitle = document.getElementById('photoTitle');
+
+    // 사진을 누르면 팝업으로 크게 보기
+    document.querySelectorAll('.slide-photo').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        const img = btn.querySelector('img');
+        modalImg.src = img.src;
+        modalImg.alt = img.alt;
+        modalTitle.textContent = img.alt;
+        modal.showModal();
+      });
+    });
+
+    // × 버튼 또는 사진 바깥(어두운 배경)을 누르면 닫기 (ESC 키로도 닫힘)
+    modal.querySelector('.photo-close').addEventListener('click', function () {
+      modal.close();
+    });
+    modal.addEventListener('click', function (e) {
+      if (e.target === modal) modal.close();
+    });
+
+    // 사진 파일이 없으면 "写真を準備中です" 상자로 표시
+    document.querySelectorAll('.slide img').forEach(function (img) {
+      function showEmpty() {
+        img.closest('.slide').classList.add('no-photo');
+      }
+
+      // 이 코드가 실행되기 전에 이미 불러오기에 실패한 사진도 확인
+      if (img.complete && img.naturalWidth === 0) {
+        showEmpty();
+      }
+      img.addEventListener('error', showEmpty);
+    });
+
+    // 슬라이더마다 ◀ ▶ 버튼 연결
+    document.querySelectorAll('.slider').forEach(function (slider) {
+      const track = slider.querySelector('.slider-track');
+      const prev = slider.querySelector('.prev');
+      const next = slider.querySelector('.next');
+
+      // 사진 한 장(+ 간격) 만큼 옆으로 이동
+      function move(direction) {
+        const slide = track.querySelector('.slide');
+        const gap = parseFloat(getComputedStyle(track).gap) || 0;
+        track.scrollBy({ left: direction * (slide.offsetWidth + gap), behavior: 'smooth' });
+      }
+
+      prev.addEventListener('click', function () { move(-1); });
+      next.addEventListener('click', function () { move(1); });
+
+      // 맨 처음이면 ◀, 맨 끝이면 ▶ 버튼을 흐리게
+      function updateButtons() {
+        const max = track.scrollWidth - track.clientWidth - 1;
+        prev.disabled = track.scrollLeft <= 0;
+        next.disabled = track.scrollLeft >= max;
+      }
+
+      track.addEventListener('scroll', updateButtons);
+      window.addEventListener('resize', updateButtons);
+      updateButtons();
+    });
+  </script>
+
+  <script src="lang.js"></script>
+</body>
+</html>

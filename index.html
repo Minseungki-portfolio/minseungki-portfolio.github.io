@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>개발자 포트폴리오</title>
+  <!-- 같은 폴더에 있는 style.css 파일을 불러옴 -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== 1. 상단 영역 (로고 + 메뉴) ===== -->
+  <header class="header">
+    <a href="index.html" class="logo">MyPortfolio</a>
+
+    <nav class="nav">
+      <ul class="nav-list">
+        <!-- 클릭 시 해당 HTML 페이지로 이동 -->
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="career.html" data-ko="Career">キャリア</a></li>
+        <li><a href="projects.html" data-ko="Projects">プロジェクト</a></li>
+        <li><a href="contact.html" data-ko="Contact">お問い合わせ</a></li>
+      </ul>
+
+      <!-- 언어 전환 스위치: 누른 쪽으로 흰색 배경이 미끄러지듯 이동 -->
+      <div class="lang-switch" role="group" aria-label="言語切替">
+        <span class="lang-thumb"></span>
+        <button type="button" class="lang-option" data-lang="ja" aria-pressed="true">日本語</button>
+        <button type="button" class="lang-option" data-lang="ko" aria-pressed="false">한국어</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===== 2. 메인 영역 (좌: 사진 / 우: 소개) ===== -->
+  <main class="main">
+    <section class="intro">
+
+      <!-- 왼쪽: 사진 -->
+      <div class="intro-image">
+        <img src="images/profile.jpg" alt="プロフィール写真">
+      </div>
+
+      <!-- 오른쪽: 간단한 설명 -->
+      <div class="intro-text">
+        <p class="intro-hello" data-ko="간호사에서 엔지니어로.">看護師から、エンジニアへ。</p>
+        <h1 class="intro-title" data-ko="이용자 관점에서 개발하는 엔지니어,<br>민승기입니다.">利用者視点で開発するエンジニア、<br>ミンスンギです。</h1>
+        <p class="intro-desc" data-ko="의료 현장에서 기른 팀워크와 과제를 신중하게 파악하는 능력이 저의 강점입니다. 개발에서도 사용자, 팀과 마주하며 정말로 필요한 시스템을 만들어 가겠습니다.">
+          医療現場で培ったチームワークと、課題を慎重に見極める力が私の強みです。開発でもユーザーやチームと向き合い、本当に必要とされるシステムを形にしていきます。
+        </p>
+
+        <!-- 간단한 경력 -->
+        <div class="career">
+          <h2 class="career-title">Brief Career</h2>
+          <ul class="career-list">
+            <li>
+              <strong data-ko="2026.08 ~ 현재">2026.08 ~ 現在</strong>
+              <p data-ko="(주)Global In 해외취업교육센터 IT 코스(Java, SQL, Oracle, 웹 개발) 수강 중">株式会社Global In 海外就職教育センター ITコース（Java、SQL、Oracle、Web開発）受講中</p>
+            </li>
+            <li>
+              <strong>2025.01 ~ 2026.06</strong>
+              <p data-ko="씨젠의료재단 의료기관용 시스템 유지보수">Seegene医療財団　医療機関向けシステムの維持・保守</p>
+            </li>
+            <li>
+              <strong>2019.03 ~ 2025.01</strong>
+              <p data-ko="간호사로 병원·보건소 근무">正看護師として病院・保健所に勤務</p>
+            </li>
+          </ul>
+        </div>
+
+        <a href="about.html" class="btn" data-ko="자기소개 보기">自己紹介を見る</a>
+      </div>
+
+    </section>
+  </main>
+
+  <script src="lang.js"></script>
+</body>
+</html>
